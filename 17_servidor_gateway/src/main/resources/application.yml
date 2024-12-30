@@ -1,0 +1,39 @@
+server:
+  port: 7000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  application:
+    name: servidor-gateway
+  cloud: 
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+              allowedOrigins: "*"
+              allowedMethods: "*"
+              allowedHeaders: "*"
+      routes: #proyectos 16_ y 17_
+      - id: serv-productos1
+          #lb:// cuando se va a acceder a través de Eureka
+        uri: lb://servicio-productos1  #http://localhost:8000
+        predicates:
+          - Path=/sproductos/**
+        filters:
+          - RewritePath=/sproductos/*, /				
+      - id: serv-productos2
+        uri: lb://servicio-productos2  #http://localhost:9000
+        predicates:
+          - Path=/other/**
+        filters:
+          - RewritePath=/other/*, /
+      - id: srv-rastreador 
+        uri: lb://servicio-rastreator #http://localhost:8080
+        predicates:
+          - Path=/rastreador/**
+        filters:
+          - RewritePath=/rastreador/*, /

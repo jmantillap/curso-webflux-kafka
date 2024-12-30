@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "4055f71e-2d38-43cc-b8f1-4e5c8cceee37",
+		"name": "06_microservicio_rastreador",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22646572"
+	},
+	"item": [
+		{
+			"name": "elementos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/elementos/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"elementos",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

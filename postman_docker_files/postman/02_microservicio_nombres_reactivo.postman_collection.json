@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "786f082b-0aa4-4b16-a858-34807fbf53dd",
+		"name": "02_microservicio_nombres_reactivo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22646572"
+	},
+	"item": [
+		{
+			"name": "names Flux<Strings>",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/names",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"names"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "names1 Uppercase Mono<List<String>>",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/names1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"names1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "names2 uppercase FLux<String>",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/names2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"names2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

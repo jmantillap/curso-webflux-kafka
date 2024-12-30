@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "33504fcc-7d8b-4360-a7ec-f6f113f40de3",
+		"name": "16_06_microservicio_rastreador_eureka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22646572"
+	},
+	"item": [
+		{
+			"name": "elementos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/elementos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"elementos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

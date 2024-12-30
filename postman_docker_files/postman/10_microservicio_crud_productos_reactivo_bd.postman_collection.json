@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "caf76337-53e2-49c4-95d6-21fb82da3a42",
+		"name": "10_microservicio_crud_productos_reactivo_bd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22646572"
+	},
+	"item": [
+		{
+			"name": "productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/productos",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productos categoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/productos/Hogar",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"productos",
+						"Hogar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productos codigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/producto?cod=100",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"producto"
+					],
+					"query": [
+						{
+							"key": "cod",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"codProducto\": 230,\r\n  \"nombre\": \"Producto 230\",\r\n  \"categoria\": \"limpieza\",\r\n  \"precioUnitario\": 3.4,\r\n  \"stock\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/alta",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"codProducto\": 5000,\r\n  \"nombre\": \"Producto 500\",\r\n  \"categoria\": \"limpieza\",\r\n  \"precioUnitario\": 3.4,\r\n  \"stock\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/eliminar?cod=230",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"eliminar"
+					],
+					"query": [
+						{
+							"key": "cod",
+							"value": "230"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"codProducto\": 5000,\r\n  \"nombre\": \"Producto 500\",\r\n  \"categoria\": \"limpieza\",\r\n  \"precioUnitario\": 3.4,\r\n  \"stock\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/actualizar?cod=100&precio=200",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"actualizar"
+					],
+					"query": [
+						{
+							"key": "cod",
+							"value": "100"
+						},
+						{
+							"key": "precio",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

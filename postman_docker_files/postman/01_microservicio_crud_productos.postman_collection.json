@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "fa5563f6-8250-479d-a955-bbef139b4fd5",
+		"name": "01_microservicio_crud_productos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22646572"
+	},
+	"item": [
+		{
+			"name": "alta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"codProducto\": 230,\r\n  \"nombre\": \"Producto 230\",\r\n  \"categoria\": \"limpieza\",\r\n  \"precioUnitario\": 3.4,\r\n  \"stock\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/alta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cod=230",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/producto?cod=230",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"producto"
+					],
+					"query": [
+						{
+							"key": "cod",
+							"value": "230"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/productos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

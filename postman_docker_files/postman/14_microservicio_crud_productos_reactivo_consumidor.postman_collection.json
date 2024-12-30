@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "e6b6461b-781e-49c5-8eb9-7c9381622288",
+		"name": "14_microservicio_crud_productos_reactivo_consumidor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22646572"
+	},
+	"item": [
+		{
+			"name": "productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/productos",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

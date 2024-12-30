@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "807cce78-4280-4781-9a77-3021f8e17413",
+		"name": "17_servidor_gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22646572"
+	},
+	"item": [
+		{
+			"name": "productos-> localhost:8000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/sproductos/productos",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"sproductos",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productos-> localhost:9000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/other/productos",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"other",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "elementos localhost:8080",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/rastreador/elementos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"rastreador",
+						"elementos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
