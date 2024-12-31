@@ -62,7 +62,8 @@ public class ProductosServiceImpl implements ProductosService {
 	public void gestionPedido(Pedido pedido) {
 		productoCodigo(pedido.getCodProducto()) //Mono<Producto>
 		.flatMap(pr->{
-			pr.setStock(pr.getStock()-pedido.getUnidades());
+			int newStok = pr.getStock()-pedido.getUnidades();
+			pr.setStock(newStok);
 			return productosRepository.save(pr); //Mono<Producto>
 		})//Mono<Producto>
 		.map(pr -> {
@@ -70,6 +71,10 @@ public class ProductosServiceImpl implements ProductosService {
 				+ " en el tópico pedidosTopic");					
 				return pr;
 		})// Mono<Product>
+		.flatMap(pr->{					
+					log.info("El producto " + pr.getNombre() + " tiene unidades en stock: " + pr.getStock());					
+					return Mono.just(pr);
+		})//Mono<Producto>
 		.subscribe();
 	}
 }
